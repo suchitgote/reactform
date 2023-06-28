@@ -1,124 +1,583 @@
 <!DOCTYPE html>
-<html>
-    
+
+<html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <title>Pruebas</title>
-    <meta name="viewport" content="width=device-width; initial-scale=1.0;">
-    <link rel="stylesheet" href="styleslocation/style.css">
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-    }
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    .container {
-      max-width: 500px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-    }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .form-group {
-      margin-bottom: 20px;
-    }
+    <title>Document</title>
 
-    label {
-      display: block;
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"] {
-      width: 100%;
-      padding: 10px 0px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    input[type="submit"] {
-      background-color: #4caf50;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 5px;
-    }
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
 
-    input[type="submit"]:hover {
-      background-color: #45a049;
-    }
+   
 
-    /* Mobile Styles */
-    @media only screen and (max-width: 600px) {
-      .container {
-        max-width: none;
-        margin: 5px;
-        padding: 10px;
-      }
+    <style>
 
-      input[type="text"], input[type="email"], input[type="tel"] {
-        font-size: 29px;
-        padding: 0;
-      }
-      input[type="submit"] {
-        padding: 8px 16px;
-      }
-    }
-  </style>
+        *{
+
+            padding: 0;
+
+            margin: 0;
+
+        }
+
+        body{
+
+            font-family: "Montserrat";
+
+        }
+
+        .main{
+
+            width: 100%;
+
+            height: 100vh;
+
+            background-color: #eaeaea;
+
+        }
+
+        .heading{
+
+            background-color: #3a93ce;
+
+            padding: 10px;
+
+        }
+
+        .heading_text{
+
+            color: white;
+
+            font-weight: bold;
+
+        }
+
+        .container{
+
+            width: 95%;
+
+            margin: auto;
+
+        }
+
+        #box1{
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: space-between;
+
+            margin-top: 10px;
+
+        }
+
+        #box2{
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: space-between;
+
+            margin-top: 10px;
+
+            background-color:  #d9d9d9;
+
+            border-radius: 3px;
+
+            padding: 7px;
+
+        }
+
+        .title-value-box{
+
+            width: 38%;
+
+        }
+
+        .title{
+
+            color: rgb(179, 184, 189);
+
+            font-size: 12px;
+
+            margin-bottom: 3px;
+
+        }
+
+        .value{
+
+            /* color: rgb(179, 184, 189); */
+
+            font-size: 11px;
+
+            font-weight: bold;
+
+        }
+
+        .selector{
+
+            width: 90%;
+
+            font-size: 10px;
+
+            padding: 4px;
+
+            border-radius: 5px;
+
+            border-width: 1px;
+
+            border-color: #e8efef;
+
+        }
+
+        button{
+
+            border-radius: 33px;
+
+            background-color: rgb(1 176 81);
+
+            padding: 8px 10px;
+
+            width: 100%;
+
+            margin-top: 10px;
+
+            border: none;
+
+            color: white;
+
+        }
+
+
+
+
+        @media only screen and (min-width: 600px) {
+
+            .heading{
+
+                text-align: center;
+
+            }
+
+            .container{
+
+                width: 60%;
+
+            }
+
+            .selector{
+
+                font-size: 15px;
+
+                padding: 10px;
+
+            }
+
+            .title{
+
+                font-size: 15px;
+
+            }
+
+            .value{
+
+                font-size: 14px;
+
+            }
+
+        }
+
+
+
+
+    </style>
+
 </head>
+
 <body>
-  <div class="container">
-    <form>
-      <div class="form-group">
-        <label for="first-name">First Name:</label>
-        <input type="text" id="first-name" name="first-name" required>
-      </div>
 
-      <div class="form-group">
-        <label for="last-name">Last Name:</label>
-        <input type="text" id="last-name" name="last-name" required>
-      </div>
+    <div class="main">
 
-      <div class="form-group">
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required>
-      </div>
+        <div class="heading"><h3 class="heading_text" >GOODS RECEIPT NOTE</h3></div>
 
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-      </div>
+        <div class="container">
 
-      <div class="form-group">
-        <label for="address">Address:</label>
-        <input type="text" id="address" name="address" required>
-      </div>
+            <div id="box1" ></div>
 
-      <div class="form-group">
-        <label for="location">Location:</label>
-        <input type="text" id="location" name="location" required>
-      </div>
+            <div id="box2"></div>
 
-      <div class="form-group">
-        <label for="id">ID:</label>
-        <input type="text" id="id" name="id" required>
-      </div>
+            <button>Submit</button>
 
-      <div class="form-group">
-        <label for="company">Company:</label>
-        <input type="text" id="company" name="company" required>
-      </div>
+        </div>
 
-      <input type="submit" value="Submit">
-    </form>
-  </div>
+    </div>
+
 </body>
+
+    <script>
+
+        const list1 = [
+
+            {
+
+                title : 'Vender',
+
+                value : 'Test communication itd',
+
+                width: '38%;'
+
+            },
+
+            {
+
+                title : 'Plant/sloc',
+
+                value : 'JLAI/JLAI',
+
+                width: '30%;'
+
+            },
+
+            {
+
+                title : 'PO',
+
+                value : '4500000010',
+
+                width: '30%;'
+
+            },
+
+            {
+
+                title : 'Invoice',
+
+                value : 'ABCD123456',
+
+                width: '38%;'
+
+            },
+
+            {
+
+                title : 'Shipment',
+
+                value : '1234567892',
+
+                width: '30%;'
+
+            },
+
+            {
+
+                title : 'Delivery',
+
+                value : '180000101',
+
+                width: '30%;'
+
+            },
+
+        ];
+
+        const box1 = document.getElementById("box1");
+
+        let box1data = '';
+
+        list1.forEach(item =>{
+
+            box1data +=
+
+                `<div style="width: ${item.width} ; margin-bottom : 10px">
+
+                    <p class="title">${item.title}</p>
+
+                    <p class="value">${item.value}</p>
+
+                </div>`  
+
+        })
+
+        box1.innerHTML = box1data;
+
+   
+
+        // ...............................
+
+
+
+
+        const list2 = [
+
+            {
+
+                title : 'Material',
+
+                value : '20098765432 sample description - 01',
+
+                width: '50%;',
+
+                type:'text',
+
+            },
+
+            {
+
+                title : 'Storage Bin',
+
+                value : 'CLS/LIA-CLS1',
+
+                width: '50%;',
+
+                type:'text',
+
+            },
+
+            {
+
+                title : 'IBD Qty',
+
+                value : '100',
+
+                width: '50%;',
+
+                type:'text',
+
+            },
+
+            {
+
+                title : 'Shipment Qty*',
+
+                value : '100',
+
+                width: '50%;',
+
+                type:'text-input',
+
+                placeholder :'Shipment Qty',
+
+
+
+
+            },
+
+            {
+
+                title : 'Good Bin',
+
+                value : '100',
+
+                width: '50%;',
+
+                type:'text',
+
+            },
+
+            {
+
+                title : 'Excess Qty',
+
+                value : '100',
+
+                width: '50%;',
+
+                type:'text',
+
+            },
+
+            {
+
+                title : 'Damaged Qty*',
+
+                value : '100',
+
+                width: '50%;',
+
+                type:'text-input',
+
+                placeholder :'Damaged Qty',
+
+            },
+
+            {
+
+                title : 'Reason code*',
+
+                value : '100',
+
+                width: '50%;',
+
+                type:'selector',
+
+                placeholder :'Reason code',
+
+                options:[
+
+                    {
+
+                        name:'select',
+
+                        value : 'volvo'
+
+                    },
+
+                    {
+
+                        name:'Saab',
+
+                        value : 'saab'
+
+                    },
+
+                    {
+
+                        name:'Opel',
+
+                        value : 'opel'
+
+                    },
+
+                    {
+
+                        name:'Audi',
+
+                        value : 'audi'
+
+                    },
+
+                ]
+
+            },
+
+            {
+
+                title : 'Storage Qty*',
+
+                value : '100',
+
+                width: '50%;',
+
+                type:'text-input',
+
+                placeholder :'Storage Qty',
+
+            },
+
+            {
+
+                title : 'Reason code*',
+
+                value : '100',
+
+                width: '50%;',
+
+                type:'selector',
+
+                placeholder :'Reason code',
+
+                options:[
+
+                    {
+
+                        name:'select',
+
+                        value : 'volvo'
+
+                    },
+
+                    {
+
+                        name:'Saab',
+
+                        value : 'saab'
+
+                    },
+
+                    {
+
+                        name:'Opel',
+
+                        value : 'opel'
+
+                    },
+
+                    {
+
+                        name:'Audi',
+
+                        value : 'audi'
+
+                    },
+
+                ]
+
+            },
+
+        ];
+
+        const box2 = document.getElementById("box2");
+
+        let box2data = '';
+
+        list2.forEach(item =>{
+
+            box2data +=
+
+                `<div style="width: ${item.width} ; margin-bottom : 10px">
+
+                    <p class="title">${item.title}</p>
+
+                    ${
+
+                        item.type == "text" ?
+
+                        `<p class="value">${item.value}</p>`
+
+                        :
+
+                        item.type == "text-input" ?
+
+                        `<input type='text' placeholder='${item.placeholder}' class='selector' >`
+
+                        :
+
+                        `<select id="cars" name="carlist" form="carform"  class='selector'>
+
+                            ${item.options.map(ele=>{
+
+                               return `<option value="${ele.value}">${ele.name}</option>`
+
+                                })
+
+                            }
+
+                        </select>`
+
+                    }
+
+                   
+
+                </div>`  
+
+        })
+
+        box2.innerHTML = box2data;
+
+   
+
+    </script>
+
 </html>
